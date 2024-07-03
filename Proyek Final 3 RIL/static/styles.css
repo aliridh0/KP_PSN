@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px; /* Lebar maksimum container */
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box; /* Memastikan padding dan border tidak memperbesar lebar */
+}
+
+.plot-container {
+    width: 100%;
+    overflow: auto; /* Menambahkan bilah geser jika gambar melebihi ukuran container */
+    display: flex; /* Menggunakan flexbox */
+    justify-content: center; /* Posisi tengah konten */
+}
+
+.plot-image {
+    max-width: 100%; /* Memastikan gambar tidak melebihi lebar container */
+    width: 100%; /* Mengisi lebar container */
+    height: auto; /* Menjaga aspek ratio saat gambar diperbesar */
+}
+
+.label {
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="text"], input[type="submit"] {
+    width: calc(100% - 20px); /* Memastikan input lebar 100% container dengan padding */
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box; /* Memastikan padding dan border tidak memperbesar lebar */
+}
+
+input[type="submit"] {
+    background-color: #00a2ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #00a2ff;
+}
