@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Data</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Input Data</h1>
+        <form method="post">
+            <label for="logical_port">Logical Output Port (misal :28):</label>
+            <input type="text" id="logical_port" name="logical_port" required><br><br>
+            <label for="subchannel">Subchannel (misal :17):</label>
+            <input type="text" id="subchannel" name="subchannel" required><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
