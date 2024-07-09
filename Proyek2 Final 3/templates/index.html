@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Data</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Input Data</h1>
+        <form method="post">
+            <label for="logical_port">Logical Output Port (misal: 28 untuk DTPO-28):</label>
+            <input type="text" id="logical_port" name="logical_port" required><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <div class="container">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">
+                        {{ message.strip() | safe }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        {% if plot_html_gain %}
+            <div>
+                <h2>Grafik Sum Gain Numerik terhadap Waktu (Rentang 7 Menit)</h2>
+                {{ plot_html_gain | safe }}
+            </div>
+        {% endif %}
+
+        {% if plot_html_power %}
+            <div>
+                <h2>Grafik Sum Power Out Numerik terhadap Waktu (Rentang 7 Menit)</h2>
+                {{ plot_html_power | safe }}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
