@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
+}
+
+header {
+    background-color: white ;
+    color: #42547C;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    width: 120px;
+    height: auto;
+}
+
+h1 {
+    margin: 0;
+    font-size: 4em;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    padding-left: 5cm;  
+    padding-right: 5cm;  
+}
+
+.container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box; /* Memastikan padding dan border tidak memperbesar lebar */
+    position: relative; /* Untuk memastikan positioning relatif terhadap container */  
+
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"], input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #42547C;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #42547C;
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    color: white;
+}
+
+.alert-success {
+    background-color: #4CAF50;
+}
+
+.alert-error {
+    background-color: #f44336;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+h2 {
+    color: #42547C;
+}
